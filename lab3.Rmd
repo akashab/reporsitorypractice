@@ -1,0 +1,48 @@
+---
+title: "Lab3 Functions"
+author: "Akash Agrawal Bejarano"
+date: "1/17/2023"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question 1
+
+Constructing a function is advantageous becomes it is an efficient codding practice that allows for the reduction of duplicate code. By writing a function that has parameters one just needs to input the parameter in the function and let the function do the execution. Without the function you would need to write the execution multiple times, leading to human error, typos, mistakes, and also taking a lot of time. Functions remove this issue and make it more efficient. 
+
+## Question 2
+
+```{r}
+zFunction <- function(x, u , s){
+  return((x-u)/s)
+}
+zFunction(25.77, 23.54, 2.442)
+```
+
+## Question 3
+
+```{r}
+q3 <- function(logN, prime){
+  return((log(logN) * log10(logN)) / (prime^(1/3)))
+}
+q3(32, 11)
+## rounded value
+round(q3(32,11), digits = 1) 
+```
+
+## Question 4
+
+```{r}
+ output <- vector("double", ncol(mtcars))  # 1. output
+ for (i in seq_along(mtcars)) {            # 2. sequence
+   output[[i]] <- sd(mtcars[[i]])      # 3. body
+ }
+ output
+ 
+ 
+```
